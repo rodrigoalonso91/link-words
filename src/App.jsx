@@ -38,8 +38,12 @@ export default function App() {
 
         const currentWordFirstChar = currentWord.charAt(0).toLowerCase();
         const previousWordLastChar = previousWord.charAt(previousWord.length - 1).toLowerCase()
+        const previousWordSecondLastChar = previousWord.charAt(previousWord.length - 2).toLowerCase()
+        const previousWordThirdLastChar = previousWord.charAt(previousWord.length - 3).toLowerCase()
 
-        if (currentWordFirstChar === previousWordLastChar) {
+        if (currentWordFirstChar === previousWordLastChar || 
+            currentWordFirstChar === previousWordSecondLastChar ||
+            currentWordFirstChar === previousWordThirdLastChar) {
             setAllWords([...allWords, currentWord])
             setPreviousWord(currentWord)
             setCurrentWord('')
