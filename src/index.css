@@ -1,3 +1,7 @@
+body {
+  background-color: #2F4858;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -20,4 +24,10 @@
 .words {
   display: flex;
   font-size: 2.3rem;
+}
+
+@media (max-width: 480px) {
+  .words {
+    font-size: 80%;
+  }
 }

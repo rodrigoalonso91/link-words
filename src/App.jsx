@@ -44,7 +44,7 @@ export default function App() {
         if (currentWordFirstChar === previousWordLastChar || 
             currentWordFirstChar === previousWordSecondLastChar ||
             currentWordFirstChar === previousWordThirdLastChar) {
-            setAllWords([...allWords, currentWord])
+            setAllWords([currentWord, ...allWords])
             setPreviousWord(currentWord)
             setCurrentWord('')
             setShowMessage(false)
@@ -70,7 +70,7 @@ export default function App() {
                     </section>
                 )
             }
-            <p className="words">{allWords.join(' - ')}</p>
+            <p className="words">{allWords.join(' 🔗 ')}</p>
         </div>
     )
 }
