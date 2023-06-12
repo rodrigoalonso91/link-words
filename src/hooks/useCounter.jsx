@@ -10,8 +10,8 @@ export default function useCounter({initialValue = 0}) {
     }
 
     const incrementCounter = (amount = 1) => {
+        setTotalCounter(totalCounter + amount)
         setCounter(counter + amount)
-        setTotalCounter(counter + amount)
     }
 
     return {
