@@ -36,6 +36,11 @@ export default function App() {
             return
         }
 
+        if (allWords[1] === currentWord){
+            setShowMessage(true)
+            return
+        }
+
         const currentWordFirstChar = currentWord.charAt(0).toLowerCase();
         const previousWordLastChar = previousWord.charAt(previousWord.length - 1).toLowerCase()
         const previousWordSecondLastChar = previousWord.charAt(previousWord.length - 2).toLowerCase()
